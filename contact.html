@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+</head>
+<body>
+    
+    <h1>Contact</h1>
+    <h2><i>Notre équipe</i></h2>
+    <a href="index.html">Retour</a>
+    <p></p>
+    <img src="images/thumbnail_144x144.jpeg" alt="">
+    <br>
+    <table>
+        <tr>
+            <td style="border: 1px solid black;">Adresse email : </td>
+            <td style="border: 1px solid black;">cemal.odabasioglu@etu.unilim.fr</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid black;">Votre nom :</td>
+            <td style="border: 1px solid black;">Odabasioglu Cemal</td>
+        </tr>
+    </table>
+
+    <br>
+    <div id="maDiv">
+        Je suis une div HTML
+    </div>
+    <br>
+
+    <div id="deuxiemeDiv">
+        Deuxième div HTML
+    </div>
+    <br>
+    <script>
+        const nom = "Odabasioglu Cemal";
+        var temp = -6;
+        document.write("Hello !");  // write écrit sans mette de \n à la fin
+        document.writeln("1234");   // writeln ajoute un \n à la fin de la chaîne
+        document.writeln(nom);
+        if (temp < 0){
+            document.write("It's cold...");
+        } else {
+            document.write("It's not that cold !");
+        }
+        var i = 0;
+        while(i <= 100){
+            document.writeln(i);    //avec la boucle while on initialise la variable en dehors et incrémente a l'intérieur
+            i++;
+        }
+        document.write("\n");
+        var i = 0;
+        for(var i=0;i<=100; i++){
+            document.writeln(i);   // avec la boucle for on initialise et incrémente en même temps
+        }
+        console.log("Démarrage du serveur web"); // écrit dans la console que le serveur a demarré afin de débugger plus tard
+        var nombre1 = 10;
+        console.log(nombre1);
+        console.log(document); // écrit tout le code du fichier HTML
+        e = document.getElementById ('deuxiemeDiv'); // récupere la première div
+        console.log(e);
+
+        t = document.createTextNode('coucou !'); // créé un node texte
+        p = document.createElement('p');         // créé un élément
+        p.appendChild(t);                        // ajoute le texte "coucou !" à l'élément p
+        e.appendChild(p);                        // ajoute l'élément p a la première div
+        console.log(p);
+        console.log(e);
+
+        for(var i = 3; i < 9; i++){
+            x = document.createTextNode(i + "ième DIV");
+            a = document.createElement('p');
+            a.appendChild(x);
+            e.appendChild(a);
+        }
+
+        // e.childNodes permet de voir ce que e integre comme enfant
+        // e.childNodes.length permet de savoir la longueur des enfants de e
+
+        e.removeChild(a); // pour supprimer un élément du DOM
+        document.getElementById("maDiv").innerHTML = "injected with innerHTML"; // innerHTML permet de remplacer un élément de HTML
+
+    </script>
+</body>
+</html>
